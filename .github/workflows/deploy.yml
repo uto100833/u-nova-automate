@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy Next.js (subdir) to GitHub Pages
 
 on:
   push:
@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: u-automate-site   # ★ここ重要
     steps:
       - uses: actions/checkout@v4
 
@@ -24,17 +27,18 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+          cache-dependency-path: u-automate-site/package-lock.json
 
       - run: npm ci
 
-      - name: Build
+      - name: Build (export)
         run: |
           echo "GITHUB_PAGES=true" >> $GITHUB_ENV
           npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: u-automate-site/out          # ★outの場所
 
   deploy:
     needs: build
