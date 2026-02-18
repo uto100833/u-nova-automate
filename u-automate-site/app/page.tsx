@@ -18,11 +18,18 @@ export default function Home() {
               <Badge>VBA / GAS / AI</Badge>
             </div>
 
-            <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+            <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
               {site.headline}
             </h1>
-            <p className="mt-4 max-w-2xl text-slate-300">{site.subheadline}</p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
+              {site.subheadline}
+            </p>
 
+            <div className="mt-6 flex flex-wrap gap-2 text-xs text-slate-300">
+              <span className="rounded-full border border-slate-800/70 bg-slate-950/40 px-3 py-1">CSV集計の自動化</span>
+              <span className="rounded-full border border-slate-800/70 bg-slate-950/40 px-3 py-1">月次レポート自動生成</span>
+              <span className="rounded-full border border-slate-800/70 bg-slate-950/40 px-3 py-1">会議メモ→ToDo抽出</span>
+            </div>
             <CTA
               primaryHref="/contact"
               primaryText="無料で相談する"
