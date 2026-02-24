@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U-Automate | 個人事業主向け 業務効率化パートナー</title>
+  <meta name="description" content="Google Sheets × GAS × AI を活用し、見積・請求・売上管理・問い合わせ管理を自動化。バックオフィス業務を仕組み化し、本業に集中できる環境を設計します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo">U-Automate</a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#problem">課題</a></li>
+        <li><a href="#value">投資価値</a></li>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#cases">導入事例</a></li>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#contact" class="nav-cta">無料業務診断</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effect"></div>
+    <div class="container hero-content">
+      <p class="hero-label fade-up">Business Automation Partner</p>
+      <h1 class="hero-title fade-up">
+        毎月、同じ作業を<br>繰り返していませんか？
+      </h1>
+      <p class="hero-subtitle fade-up">
+        その事務作業、<strong>仕組み</strong>でなくせます。
+      </p>
+      <p class="hero-desc fade-up">
+        Google Sheets × GAS × AI を活用し、<br class="sp-br">
+        見積・請求・売上管理・問い合わせ管理を自動化。<br>
+        本業に集中できる環境を設計します。
+      </p>
+      <div class="hero-cta fade-up">
+        <a href="#contact" class="btn btn-primary">無料業務診断を申し込む</a>
+        <a href="#cases" class="btn btn-outline">事例を見る</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section section-problem" id="problem">
+    <div class="container">
+      <h2 class="section-title fade-up">
+        こんな状態になって<br class="sp-br">いませんか？
+      </h2>
+      <div class="problem-grid">
+        <div class="problem-card fade-up">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <p>見積書を毎回<strong>手入力</strong>している</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <p>請求管理がExcelで<strong>バラバラ</strong></p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <p>入金確認を<strong>目視でチェック</strong></p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p>売上集計に毎月<strong>数時間</strong>かかる</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <p>問い合わせ管理が<strong>属人化</strong>している</p>
+        </div>
+      </div>
+      <p class="problem-solution fade-up">
+        これらは<strong>「仕組み」</strong>で解決できます。
+      </p>
+    </div>
+  </section>
+
+  <!-- Value Section -->
+  <section class="section section-value" id="value">
+    <div class="container">
+      <h2 class="section-title fade-up">
+        なぜ30万円以上するのか
+      </h2>
+      <p class="section-lead fade-up">
+        業務自動化は「ツール作成」ではありません。
+      </p>
+
+      <div class="value-layout">
+        <div class="value-includes fade-up">
+          <h3>以下を含みます</h3>
+          <ul class="value-list">
+            <li>
+              <span class="value-num">01</span>
+              <span>業務棚卸し</span>
+            </li>
+            <li>
+              <span class="value-num">02</span>
+              <span>無駄の特定</span>
+            </li>
+            <li>
+              <span class="value-num">03</span>
+              <span>自動化設計</span>
+            </li>
+            <li>
+              <span class="value-num">04</span>
+              <span>Google Apps Script実装</span>
+            </li>
+            <li>
+              <span class="value-num">05</span>
+              <span>運用設計</span>
+            </li>
+            <li>
+              <span class="value-num">06</span>
+              <span>再現性ある仕組み化</span>
+            </li>
+          </ul>
+          <p class="value-note">
+            単なるテンプレ構築ではなく、<br>
+            あなたの業務に合わせた<strong>"専用設計"</strong>を行います。
+          </p>
+        </div>
+
+        <div class="value-roi fade-up">
+          <div class="roi-card">
+            <h3>投資対効果</h3>
+            <p class="roi-example">例えば：</p>
+            <p class="roi-scenario">
+              毎月<strong>10時間</strong>の事務作業が削減できた場合
+            </p>
+            <div class="roi-calc">
+              <div class="roi-row">
+                <span>10時間 × 12ヶ月</span>
+                <span class="roi-result"><span class="count-up" data-target="120">0</span>時間</span>
+              </div>
+              <div class="roi-row">
+                <span>時給5,000円換算</span>
+                <span class="roi-result">年間 <span class="count-up" data-target="60">0</span>万円</span>
+              </div>
+            </div>
+            <p class="roi-conclusion">
+              <strong>30万円</strong>の投資は、<br>
+              <em>1年以内に回収可能</em>です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section section-services" id="services">
+    <div class="container">
+      <h2 class="section-title fade-up">サービス設計</h2>
+      <p class="section-lead fade-up">課題の整理から実装・改善まで、段階的にサポートします。</p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card fade-up">
+          <div class="service-badge">入口</div>
+          <div class="service-header">
+            <span class="service-number">①</span>
+            <h3>業務効率化診断</h3>
+          </div>
+          <p class="service-price"><span>5</span>万円</p>
+          <ul class="service-features">
+            <li>業務棚卸し</li>
+            <li>自動化優先順位整理</li>
+            <li>ROI試算</li>
+            <li>改善ロードマップ提示</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card service-card--primary fade-up">
+          <div class="service-badge service-badge--primary">主力</div>
+          <div class="service-header">
+            <span class="service-number">②</span>
+            <h3>バックオフィス<br>自動化パッケージ</h3>
+          </div>
+          <p class="service-price"><span>30</span>万円〜</p>
+          <ul class="service-features">
+            <li>見積自動生成</li>
+            <li>請求管理自動化</li>
+            <li>入金確認自動通知</li>
+            <li>売上ダッシュボード構築</li>
+            <li>データ自動集計</li>
+            <li>GAS自動化</li>
+          </ul>
+          <p class="service-note">単なるツール提供ではなく、<br>業務設計込みのパッケージです。</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card fade-up">
+          <div class="service-badge">オプション</div>
+          <div class="service-header">
+            <span class="service-number">③</span>
+            <h3>AI業務効率化<br>オプション</h3>
+          </div>
+          <p class="service-price"><span>15</span>万円〜</p>
+          <ul class="service-features">
+            <li>メール分類</li>
+            <li>文章要約</li>
+            <li>レポート自動生成</li>
+            <li>タスク抽出</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card fade-up">
+          <div class="service-badge">継続</div>
+          <div class="service-header">
+            <span class="service-number">④</span>
+            <h3>保守・改善パック</h3>
+          </div>
+          <p class="service-price">月 <span>3</span>万円〜</p>
+          <ul class="service-features">
+            <li>不具合対応</li>
+            <li>仕様変更対応</li>
+            <li>改善提案</li>
+            <li>月1回の改善ミーティング</li>
+          </ul>
+          <p class="service-note">仕組みは「作って終わり」ではありません。<br>業務の変化に合わせて進化させます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases Section -->
+  <section class="section section-cases" id="cases">
+    <div class="container">
+      <h2 class="section-title fade-up">導入事例</h2>
+
+      <div class="cases-grid">
+        <div class="case-card fade-up">
+          <div class="case-label">CASE 01</div>
+          <div class="case-block">
+            <h4>課題</h4>
+            <p>見積作成に毎回<strong>30分</strong>かかっていた</p>
+          </div>
+          <div class="case-block">
+            <h4>実施内容</h4>
+            <p>Google Sheets + GASで自動見積生成システム構築</p>
+          </div>
+          <div class="case-block case-result">
+            <h4>効果</h4>
+            <div class="case-metric">
+              <div class="case-before">
+                <span class="case-metric-label">Before</span>
+                <span class="case-metric-value">30分</span>
+              </div>
+              <div class="case-arrow">→</div>
+              <div class="case-after">
+                <span class="case-metric-label">After</span>
+                <span class="case-metric-value">3分</span>
+              </div>
+            </div>
+            <p class="case-impact">月<strong>8時間</strong>削減</p>
+          </div>
+        </div>
+
+        <div class="case-card fade-up">
+          <div class="case-label">CASE 02</div>
+          <div class="case-block">
+            <h4>課題</h4>
+            <p>売上管理が<strong>属人化</strong></p>
+          </div>
+          <div class="case-block">
+            <h4>実施内容</h4>
+            <p>ダッシュボード化＋自動集計</p>
+          </div>
+          <div class="case-block case-result">
+            <h4>効果</h4>
+            <p class="case-highlight">リアルタイム売上可視化</p>
+            <p class="case-impact">集計作業<strong>ゼロ化</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="section section-diff" id="differentiator">
+    <div class="container">
+      <div class="diff-layout">
+        <div class="diff-text fade-up">
+          <h2 class="section-title section-title--left">
+            私は単なる<br>「AI導入支援」では<br>ありません。
+          </h2>
+          <ul class="diff-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>ITエンジニア経験</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>金融系システム開発経験</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>プロジェクト管理経験</span>
+            </li>
+          </ul>
+          <p class="diff-emphasis">
+            複雑な業務フローの整理と<br>仕組み化を得意としています。
+          </p>
+        </div>
+        <div class="diff-flow fade-up">
+          <div class="flow-step">
+            <div class="flow-step-num">1</div>
+            <div class="flow-step-text">業務設計</div>
+          </div>
+          <div class="flow-connector"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">2</div>
+            <div class="flow-step-text">実装</div>
+          </div>
+          <div class="flow-connector"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">3</div>
+            <div class="flow-step-text">改善</div>
+          </div>
+          <p class="flow-label">すべてのフェーズで伴走します</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section class="section section-profile" id="profile">
+    <div class="container">
+      <h2 class="section-title fade-up">プロフィール</h2>
+      <div class="profile-card fade-up">
+        <div class="profile-info">
+          <p class="profile-role">ITエンジニア／業務効率化パートナー</p>
+          <div class="profile-text">
+            <p>
+              金融系システム開発・運用保守・プロジェクト管理を経験。<br>
+              現場で見てきたのは、
+            </p>
+            <blockquote>
+              「本業よりも事務作業に時間を取られている経営者」
+            </blockquote>
+            <p>
+              Google Sheets、GAS、AIを活用し、<br>
+              バックオフィス業務を仕組み化。
+            </p>
+            <p><strong>経営者が本業に集中できる環境を設計します。</strong></p>
+          </div>
+          <p class="profile-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            大阪拠点
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-cta" id="contact">
+    <div class="container">
+      <div class="cta-card fade-up">
+        <h2>まずは無料業務診断を<br>ご利用ください。</h2>
+        <ul class="cta-list">
+          <li>現状整理</li>
+          <li>自動化可能領域の特定</li>
+          <li>概算費用提示</li>
+        </ul>
+        <p class="cta-note">無理な営業は行いません。</p>
+        <a href="mailto:contact@example.com" class="btn btn-primary btn-lg">無料業務診断を申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">U-Automate</span>
+        <p>個人事業主向け 業務効率化パートナー</p>
+      </div>
+      <p class="footer-copy">&copy; 2026 U-Automate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
